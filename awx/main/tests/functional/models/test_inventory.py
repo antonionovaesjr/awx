@@ -212,6 +212,7 @@ class TestSCMClean:
 class TestInventorySourceInjectors:
     def test_should_use_plugin(self):
         class foo(PluginFileInjector):
+            plugin_name = 'foo_compute'
             initial_version = '2.7.8'
         assert not foo('2.7.7').should_use_plugin()
         assert foo('2.8').should_use_plugin()
