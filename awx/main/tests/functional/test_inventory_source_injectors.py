@@ -233,11 +233,8 @@ def test_inventory_update_injected_content(this_kind, script_or_plugin, inventor
     task = RunInventoryUpdate()
 
     use_plugin = bool(script_or_plugin == 'plugins')
-    if use_plugin:
-        if this_kind not in InventorySource.injectors:
-            pytest.skip('Injector class for this source is not written yet')
-        elif InventorySource.injectors[this_kind].initial_version is None:
-            pytest.skip('Use of inventory plugin is not enabled for this source')
+    if use_plugin and InventorySource.injectors[this_kind].plugin_name is None:
+        pytest.skip('Use of inventory plugin is not enabled for this source')
 
     def substitute_run(args, cwd, call_env, stdout_handle, **_kw):
         """This method will replace run_pexpect
