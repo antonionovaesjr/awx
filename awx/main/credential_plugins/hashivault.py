@@ -91,6 +91,7 @@ def hashi_backend(**kwargs):
 
 
 hashivault_plugin = CredentialPlugin(
+    'hashivault',
     'HashiCorp Vault Secret Lookup',
     inputs=hashi_inputs,
     backend=hashi_backend

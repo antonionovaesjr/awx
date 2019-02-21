@@ -1,3 +1,3 @@
 from collections import namedtuple
 
-CredentialPlugin = namedtuple('CredentialPlugin', ['name', 'inputs', 'backend'])
+CredentialPlugin = namedtuple('CredentialPlugin', ['namespace', 'name', 'inputs', 'backend'])

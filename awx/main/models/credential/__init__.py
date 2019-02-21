@@ -608,7 +608,7 @@ class CredentialType(CommonModelNameNotUnique):
     @classmethod
     def load_plugin(cls, plugin):
         ManagedCredentialType(
-            namespace=plugin.name.lower(),
+            namespace=plugin.namespace,
             name=plugin.name,
             kind='external',
             inputs=plugin.inputs
