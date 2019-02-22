@@ -1,0 +1,1 @@
+https://www.howtoforge.com/tutorial/how-to-install-ansible-awx-with-docker-on-centos/
