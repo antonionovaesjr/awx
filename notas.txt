@@ -1,1 +1,2 @@
 https://www.howtoforge.com/tutorial/how-to-install-ansible-awx-with-docker-on-centos/
+http://www.admin-magazine.com/Archive/2018/46/AWX-Web-Based-Console-Manager-for-Ansible/(offset)/3
